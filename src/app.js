@@ -1,7 +1,7 @@
-const dotenv = require('dotenv')
+// 加载环境变量
+const { loadEnv } = require('./utils/loadEnv')
 
-console.log('环境变量')
-console.log(dotenv.config())
+loadEnv()
 
 const express = require('express')
 const mainRouter = require('./routes')
@@ -11,7 +11,7 @@ const mainRouter = require('./routes')
 
 const { serverConfig } = require('./config')
 
-// 实例化express
+// express 实例
 const app = express()
 
 // 注册一些中间件

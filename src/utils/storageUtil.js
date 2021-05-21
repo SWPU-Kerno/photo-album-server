@@ -69,8 +69,7 @@ class LocalStorage {
         console.log(`处理过期-------${key}`)
         this.removeItem(key)
       } else {
-        const { value: v, duration } = value
-        this.setItem(key, v, duration - 1)
+        value.duration -=1
       }
     }
   }
